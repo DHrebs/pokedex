@@ -228,19 +228,16 @@ public class Results extends javax.swing.JFrame {
     }// </editor-fold>                        
 
     private void helpButtonActionPerformed(java.awt.event.ActionEvent evt) {                                           
-        // TODO add your handling code here:
         this.setVisible(false);
         new HelpMenu().setVisible(true);
     }                                          
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {                                           
-        // TODO add your handling code here:
         this.setVisible(false);
         new SelectionGUI().setVisible(true);
     }                                          
 
     private void returnToSearchActionPerformed(java.awt.event.ActionEvent evt) {                                               
-        // TODO add your handling code here:
         this.setVisible(false);
         new SelectionGUI().setVisible(true);
     }                                              

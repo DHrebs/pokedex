@@ -880,6 +880,13 @@ public class SelectionGUI extends javax.swing.JFrame {
         //table.setRowSorter(new TableRowSorter<>(table.getModel()));
         TableRowSorter sorter = new TableRowSorter<>(table.getModel());
         table.setRowSorter(sorter);
+        table.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                if (evt.getClickCount() == 2){
+                    tableMouseClicked(evt);
+                }
+            }
+        });
         jScrollPane1.setViewportView(table);
 
         searchButton.setText("Search");
@@ -947,21 +954,23 @@ public class SelectionGUI extends javax.swing.JFrame {
     }// </editor-fold>
 
     private void searchStringActionPerformed(java.awt.event.ActionEvent evt) {                                             
-        // TODO add your handling code here:
         TableRowSorter<TableModel> sorter = new TableRowSorter<TableModel>(((DefaultTableModel) table.getModel())); 
         sorter.setRowFilter(RowFilter.regexFilter(searchString.getText()));
 
         table.setRowSorter(sorter);
-    }                                            
+    }
 
     private void helpButtonActionPerformed(java.awt.event.ActionEvent evt) {                                           
-        // TODO add your handling code here:
         this.setVisible(false);
         new HelpMenu().setVisible(true);
     }
     
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {
-        //TODO add your handling code here:
+        this.setVisible(false);
+        new Results().setVisible(true);
+    }
+
+    private void tableMouseClicked(java.awt.event.MouseEvent evt) {                                   
         this.setVisible(false);
         new Results().setVisible(true);
     }

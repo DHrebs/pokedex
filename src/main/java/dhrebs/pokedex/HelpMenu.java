@@ -108,7 +108,6 @@ public class HelpMenu extends javax.swing.JFrame {
     }// </editor-fold>                        
 
     private void returnToSearchActionPerformed(java.awt.event.ActionEvent evt) {                                               
-        // TODO add your handling code here:
         this.setVisible(false);
         new SelectionGUI().setVisible(true);
     }                                              
