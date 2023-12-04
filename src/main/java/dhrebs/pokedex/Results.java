@@ -1,7 +1,5 @@
 package dhrebs.pokedex;
 
-import java.awt.Color;
-
 /**
  *
  * @author dhrebs
