@@ -55,7 +55,7 @@ public class SelectionGUI extends javax.swing.JFrame {
             }
         });
 
-        randomButton.setText("Generate Random Number");
+        randomButton.setText("Random ");
         randomButton.setSize(getPreferredSize());
         randomButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt){
@@ -994,6 +994,9 @@ public class SelectionGUI extends javax.swing.JFrame {
             String number = NumberGenerator.getNumber();
             System.out.println("The value returned was: " + number);
             searchString.setText(number);
+            TableRowSorter<TableModel> sorter = new TableRowSorter<TableModel>(((DefaultTableModel) table.getModel())); 
+            sorter.setRowFilter(RowFilter.regexFilter(searchString.getText()));
+            table.setRowSorter(sorter);
 
         }
         catch (Exception e){
