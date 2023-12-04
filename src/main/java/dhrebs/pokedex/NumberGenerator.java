@@ -29,9 +29,6 @@ public class NumberGenerator {
     }
     
     public static String getNumber() throws IOException{
-        // variable declaration 
-        int ch; 
-  
         // check if File exists or not 
         FileReader fr=null; 
         try
