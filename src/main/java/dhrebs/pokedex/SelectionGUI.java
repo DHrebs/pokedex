@@ -42,6 +42,7 @@ public class SelectionGUI extends javax.swing.JFrame {
         searchButton = new javax.swing.JButton();
         logo = new javax.swing.JLabel();
         helpButton = new javax.swing.JButton();
+        randomButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -51,6 +52,14 @@ public class SelectionGUI extends javax.swing.JFrame {
         searchString.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 searchStringActionPerformed(evt);
+            }
+        });
+
+        randomButton.setText("Generate Random Number");
+        randomButton.setSize(getPreferredSize());
+        randomButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt){
+                randomButtonActionPerformed(evt);
             }
         });
 
@@ -923,6 +932,8 @@ public class SelectionGUI extends javax.swing.JFrame {
                         .addComponent(searchLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(searchString, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(randomButton, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
@@ -942,7 +953,8 @@ public class SelectionGUI extends javax.swing.JFrame {
                 .addGap(15, 15, 15)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(searchLabel)
-                    .addComponent(searchString, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(searchString)
+                    .addComponent(randomButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 366, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -975,6 +987,20 @@ public class SelectionGUI extends javax.swing.JFrame {
         new Results().setVisible(true);
     }
 
+    private void randomButtonActionPerformed(java.awt.event.ActionEvent evt) {
+        try {
+            NumberGenerator.requestNumber();
+            Thread.sleep(5000);
+            String number = NumberGenerator.getNumber();
+            System.out.println("The value returned was: " + number);
+            searchString.setText(number);
+
+        }
+        catch (Exception e){
+            System.out.println(e);
+        }
+    }
+
     // Variables declaration - do not modify                     
     private javax.swing.JButton helpButton;
     private javax.swing.JButton searchButton;
@@ -983,5 +1009,6 @@ public class SelectionGUI extends javax.swing.JFrame {
     private javax.swing.JLabel searchLabel;
     private javax.swing.JTextField searchString;
     private javax.swing.JTable table;
+    private javax.swing.JButton randomButton;
     // End of variables declaration                   
 }
