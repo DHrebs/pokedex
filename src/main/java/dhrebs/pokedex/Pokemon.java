@@ -16,7 +16,7 @@ public class Pokemon {
     private String type1;
     private String type2;
 
-    private Pokemon(Integer pokemonNumber){
+    public Pokemon(Integer pokemonNumber){
         try (BufferedReader reader = new BufferedReader(new FileReader("/Users/dhrebs/Desktop/pokedex/src/main/resources/pokemon.csv"))) {
             List<String> lines = new ArrayList<>();
             String line = null;
@@ -26,14 +26,14 @@ public class Pokemon {
             reader.close();
             String result = lines.get(pokemonNumber);
             List<String> resultList = Arrays.asList(result.split(","));
-            name = resultList.get(31);
+            name = resultList.get(29);
             number = pokemonNumber;
-            height = resultList.get(28) + " m";
-            weight = resultList.get(39) + " kg";
-            shortDescription = resultList.get(25);
-            type1 = resultList.get(37);
+            height = resultList.get(26) + " m";
+            weight = resultList.get(37) + " kg";
+            shortDescription = resultList.get(23);
+            type1 = resultList.get(35);
             type1 = type1.substring(0,1).toUpperCase() + type1.substring(1);
-            type2 = resultList.get(38);
+            type2 = resultList.get(36);
             type2 = type2.substring(0,1).toUpperCase() + type2.substring(1);
 
             BufferedReader reader2 = new BufferedReader(new FileReader("/Users/dhrebs/Desktop/pokedex/src/main/resources/longDescription.csv"));
@@ -44,7 +44,6 @@ public class Pokemon {
             }
             reader2.close();
             String result2 = lines2.get(pokemonNumber);
-            System.out.println(result2);
             List<String> resultList2 = Arrays.asList(result2.split(","));
             longDescription = resultList2.get(3);
         }
@@ -61,6 +60,10 @@ public class Pokemon {
 
     public String getName(){
         return name;
+    }
+
+    public Integer getNumber(){
+        return number;
     }
 
     public String getHeight(){

@@ -979,12 +979,21 @@ public class SelectionGUI extends javax.swing.JFrame {
     
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {
         this.setVisible(false);
-        new Results().setVisible(true);
+        int row = table.getSelectedRow();
+        Object cell = table.getValueAt(row, 0);
+        Integer pokemonNumber = Integer.valueOf(cell.toString());
+        Pokemon selection = new Pokemon(pokemonNumber);
+        new Results(selection).setVisible(true);
     }
 
     private void tableMouseClicked(java.awt.event.MouseEvent evt) {                                   
         this.setVisible(false);
-        new Results().setVisible(true);
+        int row = table.getSelectedRow();
+        Object cell = table.getValueAt(row, 0);
+        Integer pokemonNumber = Integer.valueOf(cell.toString());
+        Pokemon selection = new Pokemon(pokemonNumber);
+        System.out.println(selection);
+        new Results(selection).setVisible(true);
     }
 
     private void randomButtonActionPerformed(java.awt.event.ActionEvent evt) {

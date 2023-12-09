@@ -9,8 +9,9 @@ public class Results extends javax.swing.JFrame {
     /**
      * Creates new form Results
      */
-    public Results() {
-        initComponents();
+    public Results(Pokemon pokemonSelection) {
+        Pokemon pokemon = pokemonSelection;
+        initComponents(pokemon);
     }
 
     /**
@@ -20,7 +21,7 @@ public class Results extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
-    private void initComponents() {
+    private void initComponents(Pokemon pokemon) {
 
         helpButton = new javax.swing.JButton();
         backButton = new javax.swing.JButton();
@@ -59,13 +60,13 @@ public class Results extends javax.swing.JFrame {
             }
         });
 
-        image.setIcon(new javax.swing.ImageIcon("/Users/dhrebs/Desktop/pokedex/src/main/resources/8.jpg")); // NOI18N
+        image.setIcon(new javax.swing.ImageIcon("/Users/dhrebs/Desktop/pokedex/src/main/resources/pokemon_images/" + pokemon.getNumber().toString() + ".jpg")); // NOI18N
 
         nameNumber.setFont(new java.awt.Font("Helvetica", 1, 36)); // NOI18N
-        nameNumber.setText("#8 - Wartortle");
+        nameNumber.setText("#" + pokemon.getNumber() + " - " + pokemon.getName());
 
         shortDescription.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
-        shortDescription.setText("Turtle Pokémon");
+        shortDescription.setText(pokemon.getShortDescription());
 
         heightLabel.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         heightLabel.setText("Height:");
@@ -74,15 +75,15 @@ public class Results extends javax.swing.JFrame {
         weightLabel.setText("Weight:");
 
         heightValue.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
-        heightValue.setText("3'03\"");
+        heightValue.setText(pokemon.getHeight());
 
         weightValue.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
-        weightValue.setText("50.0lbs");
+        weightValue.setText(pokemon.getWeight());
 
         longDescription.setEditable(false);
         longDescription.setBorder(null);
         longDescription.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
-        longDescription.setText("Often hides in water to stalk unwary prey. For swimming fast, it moves its ears to maintain balance.");
+        longDescription.setText(pokemon.getLongDescription());
         jScrollPane1.setViewportView(longDescription);
 
         weakness2.setIcon(new javax.swing.ImageIcon("/Users/dhrebs/Desktop/pokedex/src/main/resources/grass_small.png")); // NOI18N
