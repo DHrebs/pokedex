@@ -38,6 +38,7 @@ public class Results extends javax.swing.JFrame {
         strengthLabel = new javax.swing.JLabel();
         weaknessLabel = new javax.swing.JLabel();
         pokeType1 = new javax.swing.JLabel();
+        pokeType2 = new javax.swing.JLabel();
         weakness1 = new javax.swing.JLabel();
         strength2 = new javax.swing.JLabel();
         strength1 = new javax.swing.JLabel();
@@ -89,20 +90,23 @@ public class Results extends javax.swing.JFrame {
         weakness2.setIcon(new javax.swing.ImageIcon("/Users/dhrebs/Desktop/pokedex/src/main/resources/grass_small.png")); // NOI18N
 
         strengthLabel.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
-        strengthLabel.setText("0.5x Damage to Wartortle");
+        strengthLabel.setText("0.5x Damage to " + pokemon.getName());
 
         weaknessLabel.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
-        weaknessLabel.setText("2x Damage to Wartortle");
+        weaknessLabel.setText("2x Damage to " + pokemon.getName());
 
-        pokeType1.setIcon(new javax.swing.ImageIcon("/Users/dhrebs/Desktop/pokedex/src/main/resources/water.png")); // NOI18N
+        pokeType1.setIcon(new javax.swing.ImageIcon("/Users/dhrebs/Desktop/pokedex/src/main/resources/" + pokemon.getType1() + "_small.png")); // NOI18N
+        if (pokemon.getType2() != "") {
+            pokeType2.setIcon(new javax.swing.ImageIcon("/Users/dhrebs/Desktop/pokedex/src/main/resources/" + pokemon.getType2() + "_small.png"));
+        }
 
-        weakness1.setIcon(new javax.swing.ImageIcon("/Users/dhrebs/Desktop/pokedex/src/main/resources/electric_small.png")); // NOI18N
+        weakness1.setIcon(new javax.swing.ImageIcon("/Users/dhrebs/Desktop/pokedex/src/main/resources/Electric_small.png")); // NOI18N
 
-        strength2.setIcon(new javax.swing.ImageIcon("/Users/dhrebs/Desktop/pokedex/src/main/resources/fire_small.png")); // NOI18N
+        strength2.setIcon(new javax.swing.ImageIcon("/Users/dhrebs/Desktop/pokedex/src/main/resources/Fire_small.png")); // NOI18N
 
-        strength1.setIcon(new javax.swing.ImageIcon("/Users/dhrebs/Desktop/pokedex/src/main/resources/water_small.png")); // NOI18N
+        strength1.setIcon(new javax.swing.ImageIcon("/Users/dhrebs/Desktop/pokedex/src/main/resources/Water_small.png")); // NOI18N
 
-        strength3.setIcon(new javax.swing.ImageIcon("/Users/dhrebs/Desktop/pokedex/src/main/resources/ice_small.png")); // NOI18N
+        strength3.setIcon(new javax.swing.ImageIcon("/Users/dhrebs/Desktop/pokedex/src/main/resources/Ice_small.png")); // NOI18N
 
         returnToSearch.setText("Return to Search");
         returnToSearch.setAlignmentY(0.0F);
@@ -176,6 +180,8 @@ public class Results extends javax.swing.JFrame {
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                     .addContainerGap(660, Short.MAX_VALUE)
                     .addComponent(pokeType1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(pokeType2, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(65, 65, 65)))
         );
         layout.setVerticalGroup(
@@ -220,6 +226,7 @@ public class Results extends javax.swing.JFrame {
                 .addGroup(layout.createSequentialGroup()
                     .addGap(59, 59, 59)
                     .addComponent(pokeType1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pokeType2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(306, Short.MAX_VALUE)))
         );
 
@@ -251,6 +258,7 @@ public class Results extends javax.swing.JFrame {
     private javax.swing.JTextPane longDescription;
     private javax.swing.JLabel nameNumber;
     private javax.swing.JLabel pokeType1;
+    private javax.swing.JLabel pokeType2;
     private javax.swing.JButton returnToSearch;
     private javax.swing.JLabel shortDescription;
     private javax.swing.JLabel strength1;
