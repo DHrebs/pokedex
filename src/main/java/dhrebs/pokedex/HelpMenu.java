@@ -1,9 +1,9 @@
+// Name: Daniel Hrebenar
+// Class: CS361 - Software Engineering I
+// Description: This method generates a help menu that users can use to see information about the application.
+
 package dhrebs.pokedex;
 
-/**
- *
- * @author dhrebs
- */
 public class HelpMenu extends javax.swing.JFrame {
 
     /**

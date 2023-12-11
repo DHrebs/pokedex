@@ -1,3 +1,8 @@
+// Name: Daniel Hrebenar
+// Class: CS361 - Software Engineering I
+// Description: This is the number generator class. Because the microservice uses a text file to recieve and output information, this class handles reading and writing to the text file.
+// It is used in the SelectionGUI class.
+
 package dhrebs.pokedex;
 
 import java.io.FileWriter;

@@ -1,3 +1,8 @@
+// Name: Daniel Hrebenar
+// Class: CS361 - Software Engineering I
+// Description: Defines a Pokemon class that allows the other methods to use the pokemon object in generating data. Variables of the class are private and must be called with the public
+// get functions.
+
 package dhrebs.pokedex;
 
 import java.util.ArrayList;
@@ -38,7 +43,7 @@ public class Pokemon {
                 type2 = type2.substring(0,1).toUpperCase() + type2.substring(1);
             }
 
-            BufferedReader reader2 = new BufferedReader(new FileReader("/Users/dhrebs/Desktop/pokedex/src/main/resources/longDescription_test.txt"));
+            BufferedReader reader2 = new BufferedReader(new FileReader("/Users/dhrebs/Desktop/pokedex/src/main/resources/longDescription.txt"));
             List<String> lines2 = new ArrayList<>();
             String line2 = null;
             while ((line2 = reader2.readLine()) != null){
@@ -46,8 +51,6 @@ public class Pokemon {
             }
             reader2.close();
             longDescription = lines2.get(pokemonNumber);
-            //List<String> resultList2 = Arrays.asList(result2.split(","));
-            //longDescription = resultList2.get(3);
         }
 
         catch (Exception e){

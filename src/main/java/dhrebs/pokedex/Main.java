@@ -1,3 +1,7 @@
+// Name: Daniel Hrebenar
+// Class: CS361 - Software Engineering I
+// Description: main.java is the program that is actually run. It generates the initial selection GUI.
+
 package dhrebs.pokedex;
 
 public class Main {

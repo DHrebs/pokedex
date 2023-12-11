@@ -1,3 +1,8 @@
+// Name: Daniel Hrebenar
+// Class: CS361 - Software Engineering I
+// Description: This is the main screen of the application where users can select what pokemon they want information about. It also includes a search function and access to the help menu.
+// This is the page that also interacts with the random number generator that the microservice implements.
+
 package dhrebs.pokedex;
 
 import javax.swing.RowFilter;
@@ -5,15 +10,6 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
-
-/**
- *
- * @author dhrebs
- */
 public class SelectionGUI extends javax.swing.JFrame {
     
     DefaultTableModel model;

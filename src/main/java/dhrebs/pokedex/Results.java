@@ -1,9 +1,10 @@
+// Name: Daniel Hrebenar
+// Class: CS361 - Software Engineering I
+// Description: This is the window that actually displays pokemon information. It gets the data by the pokemon object passed to it. It contains features to go to the help menu or go 
+// back to the search page.
+
 package dhrebs.pokedex;
 
-/**
- *
- * @author dhrebs
- */
 public class Results extends javax.swing.JFrame {
 
     /**
