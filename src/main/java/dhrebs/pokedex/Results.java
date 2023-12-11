@@ -100,14 +100,6 @@ public class Results extends javax.swing.JFrame {
             pokeType2.setIcon(new javax.swing.ImageIcon("/Users/dhrebs/Desktop/pokedex/src/main/resources/" + pokemon.getType2() + "_small.png"));
         }
 
-        weakness1.setIcon(new javax.swing.ImageIcon("/Users/dhrebs/Desktop/pokedex/src/main/resources/Electric_small.png")); // NOI18N
-
-        strength2.setIcon(new javax.swing.ImageIcon("/Users/dhrebs/Desktop/pokedex/src/main/resources/Fire_small.png")); // NOI18N
-
-        strength1.setIcon(new javax.swing.ImageIcon("/Users/dhrebs/Desktop/pokedex/src/main/resources/Water_small.png")); // NOI18N
-
-        strength3.setIcon(new javax.swing.ImageIcon("/Users/dhrebs/Desktop/pokedex/src/main/resources/Ice_small.png")); // NOI18N
-
         returnToSearch.setText("Return to Search");
         returnToSearch.setAlignmentY(0.0F);
         returnToSearch.addActionListener(new java.awt.event.ActionListener() {
@@ -125,10 +117,6 @@ public class Results extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(weakness1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(weakness2))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(backButton)
                                 .addGap(18, 18, 18)
@@ -162,26 +150,11 @@ public class Results extends javax.swing.JFrame {
                                                 .addGap(148, 148, 148)
                                                 .addComponent(helpButton)))
                                         .addGap(16, 16, 16))))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(strength1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(strength2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(strength3)
-                                .addGap(66, 66, 66))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(123, 123, 123)
-                        .addComponent(weaknessLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(strengthLabel)
-                        .addGap(117, 117, 117))))
+                            ))))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                     .addContainerGap(660, Short.MAX_VALUE)
                     .addComponent(pokeType1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(pokeType2, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(65, 65, 65)))
         );
         layout.setVerticalGroup(
@@ -208,17 +181,6 @@ public class Results extends javax.swing.JFrame {
                             .addComponent(weightValue, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(strengthLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(weaknessLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(weakness1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(weakness2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(strength1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(strength2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(strength3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
                 .addComponent(returnToSearch)
                 .addContainerGap())
@@ -226,7 +188,6 @@ public class Results extends javax.swing.JFrame {
                 .addGroup(layout.createSequentialGroup()
                     .addGap(59, 59, 59)
                     .addComponent(pokeType1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(pokeType2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(306, Short.MAX_VALUE)))
         );
 
