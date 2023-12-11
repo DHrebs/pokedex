@@ -34,18 +34,20 @@ public class Pokemon {
             type1 = resultList.get(35);
             type1 = type1.substring(0,1).toUpperCase() + type1.substring(1);
             type2 = resultList.get(36);
-            type2 = type2.substring(0,1).toUpperCase() + type2.substring(1);
+            if (type2 != ""){
+                type2 = type2.substring(0,1).toUpperCase() + type2.substring(1);
+            }
 
-            BufferedReader reader2 = new BufferedReader(new FileReader("/Users/dhrebs/Desktop/pokedex/src/main/resources/longDescription.csv"));
+            BufferedReader reader2 = new BufferedReader(new FileReader("/Users/dhrebs/Desktop/pokedex/src/main/resources/longDescription_test.txt"));
             List<String> lines2 = new ArrayList<>();
             String line2 = null;
             while ((line2 = reader2.readLine()) != null){
                 lines2.add(line2);
             }
             reader2.close();
-            String result2 = lines2.get(pokemonNumber);
-            List<String> resultList2 = Arrays.asList(result2.split(","));
-            longDescription = resultList2.get(3);
+            longDescription = lines2.get(pokemonNumber);
+            //List<String> resultList2 = Arrays.asList(result2.split(","));
+            //longDescription = resultList2.get(3);
         }
 
         catch (Exception e){
@@ -91,7 +93,7 @@ public class Pokemon {
     }
 
     public static void main(String args[]) {
-        Pokemon testPokemon = new Pokemon(144);
+        Pokemon testPokemon = new Pokemon(4);
         System.out.println(testPokemon.toString());
     }
 }
